@@ -1,0 +1,6 @@
+# Calculate the hash using sha256 algorithm
+input=$1
+hash_output=$(echo -n "$input" | sha256sum | awk '{print $1}')
+
+echo "$hash_output"
+
